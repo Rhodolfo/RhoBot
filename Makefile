@@ -23,7 +23,7 @@ ${EXECUTABLE}: ${OFILES} obj/main.o
 	${COMPILER} -o ${EXECUTABLE} ${OFILES} obj/main.o 
 
 # Dependencies
-obj/main.o: ${OFILES} obj/sqlite3.o
+obj/main.o: ${OFILES}
 
 # Cleanup
 clean: 

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Setting up the environment
+  mkdir -p obj
+  mkdir -p mod

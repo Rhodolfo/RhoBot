@@ -123,11 +123,11 @@ int MemeBot::Speak(std::string message) {
 	std::string dum = message+"\r\n";
 	const char* msg = dum.c_str();
 	int len = strlen(msg);
-	int bytes_sent = send(MemeBot::sock, msg, len, NULL);	
-	usleep(MemeBot::cooldown);
+	int bytes_sent = send(MemeBot::sock, msg, len, NULL);
 	if (bytes_sent == 0)	{
 		MemeBot::Log("Empty message was sent");	
 		return false;
 	}
+	usleep(MemeBot::cooldown);
 	return 0;
 }

@@ -3,7 +3,7 @@
 int MemeBot::Lurk() {
 	int imax,imin,i,vsize;
 	imin = 0;
-	MemeBot::Speak("PRIVMSG "+MemeBot::channel+" PEACHES");
+	MemeBot::Respond("Not to worry, the memes are here!");
 	while (1) {
 		MemeBot::Listen();
 		imax = MemeBot::vecdata.size();
@@ -57,11 +57,22 @@ int MemeBot::Chat() {
 //		Now we have the user, the first word 'firstword', and the reest of the message 'message'
 		MemeBot::Log("user: "+user+" message: "+firstword+message);
 		if (firstword=="wiggle") {
-			MemeBot::Respond("rhoDog");
+			MemeBot::Respond("one two");
 		}
 	}
 }
 
 int MemeBot::Respond(std::string msg) {
-	MemeBot::Speak("PRIVMSG "+MemeBot::channel+" "+msg);
+	MemeBot::Speak("PRIVMSG "+MemeBot::channel+" :"+msg);
 }
+
+/*
+[message in madmikegamerxl1's channel]
+twitchnotify: nate just subscribed!
+twitchnotify: nate subscribed for 13 months in a row!
+twitchnotify: 13 viewers resubscribed while you were away!
+
+[message in channels hosting madmikegamerxl1's channel]
+twitchnotify: nate just subscribed to madmikegamerxl1!
+twitchnotify: nate subscribed to madmikegamerxl1 for 13 months in a row!
+*/

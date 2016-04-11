@@ -1,2 +1,5 @@
 Right now this bot does nothing but respond to the word "wiggle"
 Am, don't use this yet
+
+This bot requires sqlite to work, I'm hoesting this from an Ubuntu machine:
+sudo apt-get install libsqlite3-dev

@@ -5,13 +5,14 @@ EXECUTABLE     = RhoBot
 
 # Executable name and general rule
 .SUFFIXES:
-.SUFFIXES: .cpp .o 
+.SUFFIXES: .cpp .o
 
 # Some lists
 LFILES = init io socket chat
 SFILES = ${patsubst %, src/%.cpp, ${LFILES}}
 OFILES = ${patsubst %, obj/%.o, ${LFILES}}
-VPATH = src
+
+VPATH  = src
 
 # General rule
 obj/%.o     : %.cpp
@@ -22,7 +23,7 @@ ${EXECUTABLE}: ${OFILES} obj/main.o
 	${COMPILER} -o ${EXECUTABLE} ${OFILES} obj/main.o 
 
 # Dependencies
-obj/main.o: ${OFILES}
+obj/main.o: ${OFILES} obj/sqlite3.o
 
 # Cleanup
 clean: 

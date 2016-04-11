@@ -1,3 +1,4 @@
+#include <sqlite3.h>
 #include <netdb.h>
 #include <stdio.h>
 #include <cstring>

@@ -28,3 +28,7 @@ obj/main.o: ${OFILES}
 # Cleanup
 clean: 
 	rm -f obj/*.o ${EXECUTABLE}
+
+#Test DBs
+sql: 
+	${COMPILER} -o SQL src/sqlite.cpp -l sqlite3

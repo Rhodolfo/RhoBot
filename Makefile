@@ -12,7 +12,7 @@ LFILES = init io socket chat
 SFILES = ${patsubst %, src/%.cpp, ${LFILES}}
 OFILES = ${patsubst %, obj/%.o, ${LFILES}}
 
-VPATH  = src
+VPATH  = src 
 
 # General rule
 obj/%.o     : %.cpp
@@ -31,4 +31,4 @@ clean:
 
 #Test DBs
 sql: 
-	${COMPILER} -o SQL src/sqlite.cpp -l sqlite3
+	${COMPILER} -o sql src/sqlite/parse.cpp -l sqlite3

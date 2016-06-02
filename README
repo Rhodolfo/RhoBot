@@ -1,5 +1,7 @@
-Right now this bot does nothing but respond to the word "wiggle"
-Am, don't use this yet
+Right now this bot does nothing but respond to the word "wiggle", mostly working on behind the scenes.
 
-This bot requires sqlite to work, I'm hoesting this from an Ubuntu machine:
+Currently working on an Sqlite3->SQL conversion so that the bot can import databases from Ankhbot and then can work standalone.
+
+This bot requires sqlite to work, I'm hosting this from an Ubuntu machine, simply used a package:
 sudo apt-get install libsqlite3-dev
+I'd really really love to migrate out of Sqlite.
